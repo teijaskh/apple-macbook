@@ -1,4 +1,4 @@
-// 8 GB MEMORY INCLUDE
+/* // 8 GB MEMORY INCLUDE
 
 document.getElementById('ram8gigs').addEventListener('click', function () {
     const extraMemory = document.getElementById('extra-memory-cost');
@@ -10,9 +10,19 @@ document.getElementById('ram8gigs').addEventListener('click', function () {
 document.getElementById('ram16gigs').addEventListener('click', function () {
     const extraMemory = document.getElementById('extra-memory-cost');
     extraMemory.innerHTML = 180;
-});
+}); */
 
-//Storage 256 gigs 
+//MINIMIZED CODE OF RAM UPDATE
+function ramUpdate(ramSize, ramCost, ramprice) {
+    document.getElementById(ramSize).addEventListener('click', function () {
+        const ram = document.getElementById(ramCost);
+        ram.innerHTML = ramprice;
+    });
+};
+ramUpdate('ram8gigs', 'extra-memory-cost', 0);
+ramUpdate('ram16gigs', 'extra-memory-cost', 180);
+
+/* //Storage 256 gigs 
 document.getElementById('storage256gigs').addEventListener('click', function () {
     const extraMemory = document.getElementById('extra-storage-cost');
     extraMemory.innerHTML = 0;
@@ -27,9 +37,22 @@ document.getElementById('storage512gigs').addEventListener('click', function () 
 document.getElementById('storage1tb').addEventListener('click', function () {
     const extraMemory = document.getElementById('extra-storage-cost');
     extraMemory.innerHTML = 180;
-});
+}); */
 
-//Free Delivery
+//MINIMIZED CODE OF STORAGE UPDATE
+function storageUpdate(storageSpace, storageCost, storagePrice) {
+    document.getElementById(storageSpace).addEventListener('click', function () {
+        const storage = document.getElementById(storageCost);
+        storage.innerHTML = storagePrice;
+    });
+};
+
+storageUpdate('storage256gigs', 'extra-storage-cost', 0);
+storageUpdate('storage512gigs', 'extra-storage-cost', 100);
+storageUpdate('storage1tb', 'extra-storage-cost', 180);
+
+
+/* //Free Delivery
 document.getElementById('free-delivery').addEventListener('click', function () {
     const extraMemory = document.getElementById('delivery-cost');
     extraMemory.innerHTML = 0;
@@ -39,7 +62,17 @@ document.getElementById('free-delivery').addEventListener('click', function () {
 document.getElementById('paid-delivery').addEventListener('click', function () {
     const extraMemory = document.getElementById('delivery-cost');
     extraMemory.innerHTML = 20;
-});
+}); */
+
+//MINIMIZED CODE OF DELIVERY UPDATE
+function deliveryUpdate(deliveryType, deliveryCost, deliveryPrice) {
+    document.getElementById(deliveryType).addEventListener('click', function () {
+        const delivery = document.getElementById(deliveryCost);
+        delivery.innerHTML = deliveryPrice;
+    });
+};
+deliveryUpdate('free-delivery', 'delivery-cost', 0);
+deliveryUpdate('paid-delivery', 'delivery-cost', 20);
 
 //Update Total
 addEventListener('click', function () {
